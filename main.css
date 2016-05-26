@@ -1,7 +1,9 @@
 h2 {
   color: #562d31;
   display: inline-block;
-  padding: 20px 0;
+  font-family: 'ralewayregular';
+  padding: 25px 0;
+  -webkit-margin-start: 0.3em;
 }
 
 h2::first-letter {
@@ -12,9 +14,9 @@ h2::first-letter {
 .logo {
   display: inline-block;
   margin: 0;
-  width: 125px;
+  width: 140px;
   border-radius: 50%;
-  padding: 15px 0;
+  padding: 15px 0 5px 0;
 }
 
 .container {
@@ -29,6 +31,29 @@ div {
 }
 
 .lines {
-  border-top: 1px solid #562d31;
-  border-bottom: 1px solid #562d31;
+  border-top: 2px solid #562d31;
+  border-bottom: 2px solid #562d31;
+}
+
+.lines:hover {
+  cursor: pointer;
+}
+
+.rotated {
+  transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  position: relative;
+  top: 10px;
+}
+
+@font-face {
+    font-family: 'ralewayregular';
+    src: url( 'fonts/raleway-regular-webfont.woff2') format('woff2'),
+         url('fonts/raleway-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
 }
