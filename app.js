@@ -1,11 +1,14 @@
-$('img').hover(function() {
+$('.logo').hover(function() {
   $(this).toggleClass('rotated');
 })
 
-$('img').click(function() {
-  $(this).addClass('rotated');
+$('.logo').click(function() {
+  $(this).toggleClass('rotated');
+  $(this).toggleClass('rotated');
+
 })
 
-$('a').click(function() {
-  event.preventDefault();
+$('section').click(function() {
+  $(this).fadeOut(2000);
+  $('nav').delay(1500).animate({opacity: 1.0}, 2000);
 })

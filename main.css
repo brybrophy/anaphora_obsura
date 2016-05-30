@@ -1,7 +1,7 @@
 h2 {
   color: #562d31;
   display: inline-block;
-  font-family: 'ralewayregular';
+  font-family: 'ralewayregular', sans-serif;
   padding: 25px 0;
   -webkit-margin-start: 0.3em;
 }
@@ -11,12 +11,25 @@ h2::first-letter {
   font-weight: 100;
 }
 
+.brand-logo {
+  bottom: 0.5px;
+}
+
 .logo {
   display: inline-block;
   margin: 0;
   width: 140px;
   border-radius: 50%;
   padding: 15px 0 5px 0;
+}
+
+.logoSmall {
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0;
+  width: 55px;
+  position: relative;
+  top: 17px;
 }
 
 .container {
@@ -56,4 +69,16 @@ div {
     font-weight: normal;
     font-style: normal;
 
+}
+
+nav {
+  background-color: #7e363d;
+  font-family: 'ralewayregular', sans-serif;
+  opacity: 0.0;
+}
+
+.image {
+  display: block;
+  position: relative;
+  height: 400px;
 }
