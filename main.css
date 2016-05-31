@@ -1,5 +1,25 @@
+body {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 auto;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+}
+
 h2 {
-  color: #562d31;
+  color: #D7E9F1;
   display: inline-block;
   font-family: 'ralewayregular', sans-serif;
   padding: 25px 0;
@@ -43,12 +63,14 @@ div {
   text-align: center;
 }
 
-.lines {
-  border-top: 2px solid #562d31;
-  border-bottom: 2px solid #562d31;
+.line {
+  /*border-top: 2px solid #562d31;
+  border-bottom: 2px solid #562d31;*/
+  background-color: rgba(99, 39, 45, 0.4);
+  border-radius: 5px 50px 5px 50px;
 }
 
-.lines:hover {
+.line:hover {
   cursor: pointer;
 }
 
@@ -62,6 +84,39 @@ div {
   top: 10px;
 }
 
+.poem {
+  font-family: 'ralewayregular';
+  position: relative;
+  bottom: 150px;
+  width: 1050px;
+}
+
+nav {
+  background-color: rgba(99, 39, 45, 0.6);
+  font-family: 'ralewayregular', sans-serif;
+  opacity: 0.0;
+}
+
+.nav-wrapper {
+  margin-left: 10px;
+}
+
+.foot {
+  padding-left: 20px;
+}
+
+.image {
+  background-image: none;
+  background-size: cover;
+  background-repeat: none;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
 @font-face {
     font-family: 'ralewayregular';
     src: url( 'fonts/raleway-regular-webfont.woff2') format('woff2'),
@@ -71,14 +126,11 @@ div {
 
 }
 
-nav {
-  background-color: #7e363d;
-  font-family: 'ralewayregular', sans-serif;
-  opacity: 0.0;
-}
+@font-face {
+    font-family: 'bookerlyregular';
+    src: url('fonts/bookerly-regular-webfont.woff2') format('woff2'),
+         url('fonts/bookerly-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 
-.image {
-  display: block;
-  position: relative;
-  height: 400px;
 }
