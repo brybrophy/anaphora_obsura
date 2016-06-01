@@ -26,9 +26,44 @@ h2 {
   -webkit-margin-start: 0.3em;
 }
 
+h4 {
+  color: #fff;
+  font-family: 'ralewayregular', sans-serif;
+}
+
 h2::first-letter {
   font-size: 150%;
   font-weight: 100;
+}
+
+p {
+  font-family: "Helvetica Neue";
+  color: #616161;
+  font-size: 120%;
+}
+
+.arrow {
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 3px #fff;
+  cursor: pointer;
+  display: inline-block;
+  height: 16px;
+  margin: 0 auto;
+  margin: 20px 5px;
+  opacity: .4;
+  position: relative;
+  width: 16px;
+  box-sizing: border-box;
+}
+
+.arrow:hover {
+  opacity: 1;
+}
+
+.active {
+  background: #fff;
+  box-shadow: none;
+  opacity: 1;
 }
 
 .brand-logo {
@@ -63,9 +98,19 @@ div {
   text-align: center;
 }
 
+.poem {
+  background-color: rgba(208, 196, 197, 0.90);
+  border-radius: 5px;
+  display: none;
+  line-height: 10px;
+  height: 500px;
+  position: fixed;
+  top: 150px;
+  overflow: scroll;
+  opacity: 0.0;
+}
+
 .line {
-  /*border-top: 2px solid #562d31;
-  border-bottom: 2px solid #562d31;*/
   background-color: rgba(99, 39, 45, 0.4);
   border-radius: 5px 50px 5px 50px;
 }
@@ -84,25 +129,25 @@ div {
   top: 10px;
 }
 
-.poem {
-  font-family: 'ralewayregular';
-  position: relative;
-  bottom: 150px;
-  width: 1050px;
-}
-
 nav {
   background-color: rgba(99, 39, 45, 0.6);
   font-family: 'ralewayregular', sans-serif;
   opacity: 0.0;
 }
 
-.nav-wrapper {
-  margin-left: 10px;
+footer {
+  height: 50px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding-top: 12 px;
+  /*background-color: rgba(99, 39, 45, 0.1);*/
+  opacity: 0.0;
 }
 
-.foot {
-  padding-left: 20px;
+.nav-wrapper {
+  margin-left: 20px;
 }
 
 .image {
@@ -126,11 +171,6 @@ nav {
 
 }
 
-@font-face {
-    font-family: 'bookerlyregular';
-    src: url('fonts/bookerly-regular-webfont.woff2') format('woff2'),
-         url('fonts/bookerly-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+@media @media (max-width: 992px) {
 
 }

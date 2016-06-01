@@ -1,3 +1,5 @@
+
+
 $('.logo').hover(function() {
   $(this).toggleClass('rotated');
 })
@@ -10,9 +12,15 @@ $('.logo').click(function() {
 
 $('.landing').click(function() {
   $(this).fadeOut(2000);
-  $('nav').delay(1500).animate({opacity: 1.0}, 2000);
-  $('.leftCol, .rightCol').delay(2500).css({display: "inline"}).animate({opacity: 1.0}, 2500);
+  $('.poem').css('display', 'block');
+  $('nav, .poem, footer').delay(1500).animate({opacity: 1.0}, 2000);
+
 })
+
+$('.arrow').on('click', function() {
+  $('.arrow').addClass('.active');
+})
+
 
 var $xml = $.ajax({
   method: "GET",
@@ -27,18 +35,43 @@ var jsonFlickrApi = function(data) {
 
   var photos = data.photos.photo;
   var photo = photos[Math.floor(Math.random() * photos.length)];
-  console.log(photo);
   var id = photo.id;
-  console.log(id);
   var serverId = photo.server;
-  console.log(serverId);
   var farm = photo.farm;
-  console.log(farm);
   var secret = photo.secret;
-  console.log(secret);
 
   var galleryUrl = `https://farm${farm}.staticflickr.com/${serverId}/${id}_${secret}_b.jpg`;
 
   $('body').addClass('image');
   $('.image').css('background-image', 'url(' + galleryUrl + ')')
 }
+
+var url = 'https://cors-anywhere.herokuapp.com/poetrydb.org/author';
+
+var randomAuthor = function(data) {
+  return Math.floor(Math.random() * 129);
+}
+var $xhl1 = $.getJSON(url, function(data) {
+  var authors = data.authors
+
+  var $xml2 = $.getJSON(`${url}/${authors[randomAuthor()]}`, function(data) {
+
+    var $randomPoem = $xml2.done(function() {
+      var poem = data[Math.floor(Math.random() * data.length)];
+      var author = poem.author;
+      var title = poem.title;
+      var lines = poem.lines;
+
+      $('.poem').append(`<h4>${title}</h4><h4>${author}</h4>`);
+
+      lines.forEach(function(line) {
+        $('.poem').append(`<p>${line}</p>`);
+      })
+
+    })
+
+
+
+
+  });
+});

@@ -17,10 +17,10 @@ var $xhl1 = $.getJSON(url, function(data) {
       var title = poem.title;
       var lines = poem.lines;
 
-      $('body').append(`<h2>${author}</h2><h2>${title}</h2>`);
+      $('.poem').append(`<h4>${title}</h4><h4>${author}</h4>`);
 
       lines.forEach(function(line) {
-        $('body').append(`<p>${line}</p>`);
+        $('.poem').append(`<p>${line}</p>`);
       })
 
     })
