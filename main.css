@@ -38,7 +38,7 @@ h2::first-letter {
 
 p {
   font-family: "Helvetica Neue";
-  color: #616161;
+  color: #fff;
   font-size: 120%;
 }
 
@@ -81,10 +81,11 @@ p {
 .logoSmall {
   border-radius: 50%;
   display: inline-block;
-  margin: 0;
+  margin: 0 auto;
   width: 55px;
   position: relative;
   top: 17px;
+  right: 15px;
 }
 
 .container {
@@ -99,8 +100,8 @@ div {
 }
 
 .poem {
-  background-color: rgba(208, 196, 197, 0.90);
-  border-radius: 5px;
+  background-color: rgba(190, 160, 164, 0.90);
+  border-radius: 5px 50px 5px 50px;
   display: none;
   line-height: 10px;
   height: 500px;
