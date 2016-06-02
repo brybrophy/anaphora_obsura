@@ -41,34 +41,42 @@ h2::first-letter {
 }
 
 p {
-  font-family: "Helvetica Neue";
+  font-family: "Avenir Next";
   color: #fff;
-  font-size: 120%;
+  font-size: 140%;
+  font-weight: lighter;
+  line-height: 20px;
 }
 
-.arrow {
-  border-radius: 50%;
+.dot {
   box-shadow: inset 0 0 0 3px #fff;
+  border-radius: 50%;
   cursor: pointer;
   display: inline-block;
-  height: 16px;
+  height: 30px;
   margin: 0 auto;
-  margin: 20px 5px;
-  opacity: .4;
+  margin: 10px 5px;
   position: relative;
-  width: 16px;
+  width: 30px;
   box-sizing: border-box;
 }
 
-.arrow:hover {
-  opacity: 1;
+.dot:hover {
+  background: #fff;
+  box-shadow: none;
 }
 
-.active {
+.load{
+  position: relative;
+  top: 180px;
+  opacity: 0;
+}
+
+/*.active {
   background: #fff;
   box-shadow: none;
   opacity: 1;
-}
+}*/
 
 .brand-logo {
   bottom: 0.5px;
@@ -116,7 +124,7 @@ div {
 }
 
 .line {
-  background-color: rgba(99, 39, 45, 0.4);
+  background-color: rgba(99, 39, 45, 0.6);
   border-radius: 5px 50px 5px 50px;
 }
 
@@ -156,7 +164,6 @@ footer {
 }
 
 .image {
-  background-image: none;
   background-size: cover;
   background-repeat: none;
   display: block;
@@ -165,6 +172,18 @@ footer {
   right: 0;
   bottom: 0;
   left: 0;
+}
+
+.image1 {
+  background-image: none;
+}
+
+.image2 {
+  background-image: none;
+}
+
+.image3 {
+  background-image: none;
 }
 
 @font-face {
