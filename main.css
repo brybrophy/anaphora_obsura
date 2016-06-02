@@ -40,12 +40,36 @@ h2::first-letter {
   font-weight: 100;
 }
 
+h5, .side-nav p {
+  color: #212121;
+}
+
 p {
   font-family: "Avenir Next";
   color: #fff;
   font-size: 140%;
   font-weight: lighter;
   line-height: 20px;
+}
+
+.side-nav {
+  padding-top: 10px;
+  line-height: 90%;
+  width: 28%;
+  text-align: center;
+}
+
+.side-nav img {
+  margin-left: 10px;
+  position: relative;
+  top: 5px;
+}
+
+.divide {
+  border-top: 1px solid #bdbdbd;
+  width: 200px;
+  margin: 0 auto;
+  position: relative;
 }
 
 .dot {
@@ -195,6 +219,14 @@ footer {
 
 }
 
-@media @media (max-width: 992px) {
+@media screen and (max-width: 1320px) {
+  .side-nav {
+    width: 40%;
+  }
+}
 
+@media screen and (max-width: 870px) {
+  .side-nav {
+    width: 70%;
+  }
 }

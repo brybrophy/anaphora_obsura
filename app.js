@@ -92,3 +92,5 @@ var newPoem = function() {
   $('.load').animate({opacity: 1}, 1000);
   getPoem();
 }
+
+$(".button-collapse").sideNav();
