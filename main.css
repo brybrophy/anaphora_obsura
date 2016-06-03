@@ -233,11 +233,11 @@ footer .center {
 }
 
 @font-face {
-    font-family: 'ralewayregular';
-    src: url( 'fonts/raleway-regular-webfont.woff2') format('woff2'),
-         url('fonts/raleway-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'ralewayregular';
+  src: url( 'fonts/raleway-regular-webfont.woff2') format('woff2'),
+       url('fonts/raleway-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 
 }
 
