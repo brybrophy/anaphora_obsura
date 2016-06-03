@@ -116,7 +116,7 @@ p {
 .load{
   position: relative;
   top: 180px;
-  opacity: 0;
+  opacity: 1;
 }
 
 .brand-logo {
