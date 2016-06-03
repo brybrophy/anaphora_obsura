@@ -54,6 +54,11 @@ small {
   position: relative;
 }
 
+li:nth-of-type(2) {
+  height: 15px;
+  margin-top: 25px;
+}
+
 p {
   color: #fff;
   font-family: "Avenir Next";
