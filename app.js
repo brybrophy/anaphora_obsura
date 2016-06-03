@@ -130,7 +130,7 @@ $('.button-collapse').sideNav();
 $('.share').click(function() {
   'use strict';
 
-  window.open($(window).attr('href'), 'title', 'width=590, height=600');
+  window.open($(this).attr('href'), 'title', 'width=590, height=600');
 
   return false;
 });

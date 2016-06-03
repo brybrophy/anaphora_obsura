@@ -41,7 +41,7 @@ h4 {
 }
 
 h4:first-of-type {
-  margin-top: 50px;
+  margin-top: 60px;
 }
 
 h5, .side-nav p, small {
@@ -191,19 +191,19 @@ footer .center {
   display: flex;
   justify-content: center;
   position: relative;
-  top: 200px;
+  top: 32vh;
 }
 
 .poem {
   background-color: rgba(190, 160, 164, 0.90);
   border-radius: 5px 50px 5px 50px;
   display: none;
-  height: 64vh;
+  height: 500px;
   line-height: 10px;
   opacity: 0.0;
   overflow: scroll;
   position: fixed;
-  top: 150px;
+  top: 19vh;
 }
 
 .line {
@@ -249,6 +249,12 @@ footer .center {
 @media screen and (max-width: 1320px) {
   .side-nav {
     width: 40%;
+  }
+}
+
+@media screen and (max-width: 993px) {
+  .container {
+    top: 15vh;
   }
 }
 
