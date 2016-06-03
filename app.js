@@ -11,9 +11,9 @@ $('.logo').click(function() {
 })
 
 $('.landing').click(function() {
-  $(this).fadeOut(2000);
+  $(this).fadeOut(1000);
   $('.poem').css('display', 'block');
-  $('nav, .poem, footer').delay(1500).animate({opacity: 1.0}, 2000);
+  $('nav, .poem, footer').delay(1000).animate({opacity: 1.0}, 1500);
 
 })
 
@@ -44,15 +44,30 @@ var jsonFlickrApi = function(data) {
     $(this).addClass('active');
     jsonFlickrApi(data);
     newPoem();
-    console.log(data);
   });
 
   $(document).off('keydown');
   $(document).on('keydown', function(event) {
     if (event.keyCode === 39) {
-      console.log('left');
       jsonFlickrApi(data);
       newPoem();
+    }
+    if (event.keyCode === 38) {
+      $('#minus').text('-');
+      $('#plus').text(null);
+      $('.poem').animate({opacity: 1}, 500);
+      $('footer .center').css("bottom", "50px");
+    }
+    if (event.keyCode === 40) {
+      $('#minus').text(null);
+      $('#plus').text('+');
+      $('.poem').animate({opacity: 0}, 500);
+      $('footer .center').css("bottom", "70px");
+    }
+    if (event.keyCode === 37) {
+      $('.image').css('background-image', states[states.length - 2]['image']);
+      $('.poem').html(states[states.length - 2]['poem']);
+      states.pop();
     }
   });
 }
@@ -80,6 +95,8 @@ var getPoem = function() {
         lines.forEach(function(line) {
           $('.poem').append(`<p>${line}</p>`);
         })
+        saveState();
+        stateCount += 1;
       })
     });
   });
@@ -94,3 +111,34 @@ var newPoem = function() {
 }
 
 $(".button-collapse").sideNav();
+
+$('.share').click(function() {
+  window.open($(this).attr('href'), 'title', 'width=590, height=600');
+  return false;
+})
+
+$('#minus').click(function() {
+  $('#minus').text(null);
+  $('#plus').text('+');
+  $('.poem').animate({opacity: 0}, 500);
+  $('footer .center').css("bottom", "70px");
+})
+
+$('#plus').click(function() {
+  $('#minus').text('-');
+  $('#plus').text(null);
+  $('.poem').animate({opacity: 1}, 500);
+  $('footer .center').css("bottom", "50px");
+})
+
+var stateCount = 0;
+var states = [];
+var state = {};
+var saveState = function() {
+  state = {
+  image: bodyObj.backgroundImage,
+  poem: $('.poem').html()
+  }
+  states.push(state);
+}
+var bodyObj = $('body').prop('style')
