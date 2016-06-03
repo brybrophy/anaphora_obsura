@@ -18,12 +18,21 @@ main {
           flex: 1 0 auto;
 }
 
+div {
+  text-align: center;
+}
+
 h2 {
   color: #D7E9F1;
   display: inline-block;
   font-family: 'ralewayregular', sans-serif;
   padding: 25px 0;
   -webkit-margin-start: 0.3em;
+}
+
+h2::first-letter {
+  font-size: 150%;
+  font-weight: 100;
 }
 
 h4 {
@@ -35,48 +44,80 @@ h4:first-of-type {
   margin-top: 50px;
 }
 
-h2::first-letter {
-  font-size: 150%;
-  font-weight: 100;
-}
-
 h5, .side-nav p, small {
   color: #212121;
+}
+
+small {
+  bottom: 40px;
+  font-family: "Avenir Next";
+  position: relative;
+}
+
+p {
+  color: #fff;
+  font-family: "Avenir Next";
+  font-size: 140%;
+  font-weight: lighter;
+  line-height: 20px;
+}
+
+nav {
+  background-color: rgba(99, 39, 45, 0.6);
+  font-family: 'ralewayregular', sans-serif;
+  opacity: 0.0;
+}
+
+.nav-wrapper {
+  margin-left: 20px;
+}
+
+footer {
+  bottom: 0;
+  height: 50px;
+  left: 0;
+  opacity: 0.0;
+  padding-top: 12px;
+  position: fixed;
+  right: 0;
+}
+
+footer .center {
+  border-radius: 50px;
+  bottom: 50px;
+  margin: 0 auto;
+  padding: 10px;
+  position: relative;
+  width: 70px;
+}
+
+.add_remove p {
+  cursor: pointer;
+  font-size: 340%;
+  font-weight: normal;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.side-nav {
+  line-height: 90%;
+  padding-top: 10px;
+  text-align: center;
+  width: 28%;
 }
 
 .side-nav p {
   font-size: 110%;
 }
 
-small {
-  font-family: "Avenir Next";
-  position: relative;
-  bottom: 40px;
-}
-
-p {
-  font-family: "Avenir Next";
-  color: #fff;
-  font-size: 140%;
-  font-weight: lighter;
-  line-height: 20px;
-}
-
-.side-nav {
-  padding-top: 10px;
-  line-height: 90%;
-  width: 28%;
-  text-align: center;
-}
-
 .side-nav a {
-  display: inline-block;
-  width: 50px;
-  height: 60px;
-  padding: 0;
-  font-size: 0;
-  line-height: 0;
   border-radius: 50px;
+  display: inline-block;
+  font-size: 0;
+  height: 60px;
+  line-height: 0;
+  padding: 0;
+  width: 50px;
 }
 
 .side-nav a:hover {
@@ -88,24 +129,23 @@ p {
   top: 12px;
 }
 
-
 .divide {
   border-top: 1px solid #bdbdbd;
-  width: 200px;
   margin: 0 auto;
   position: relative;
+  width: 200px;
 }
 
 .dot {
-  box-shadow: inset 0 0 0 4px #fff;
   border-radius: 50%;
+  box-shadow: inset 0 0 0 4px #fff;
+  box-sizing: border-box;
   cursor: pointer;
   display: block;
   height: 30px;
   margin: 0 auto;
   position: relative;
   width: 30px;
-  box-sizing: border-box;
 }
 
 .dot:hover {
@@ -114,31 +154,31 @@ p {
 }
 
 .load{
+  opacity: 1;
   position: relative;
   top: 180px;
-  opacity: 1;
-}
-
-.brand-logo {
-  bottom: 0.5px;
 }
 
 .logo {
+  border-radius: 50%;
   display: inline-block;
   margin: 0;
-  width: 140px;
-  border-radius: 50%;
   padding: 15px 0 5px 0;
+  width: 140px;
 }
 
 .logoSmall {
   border-radius: 50%;
   display: inline-block;
   margin: 0 auto;
-  width: 55px;
   position: relative;
-  top: 17px;
   right: 15px;
+  top: 17px;
+  width: 55px;
+}
+
+.brand-logo {
+  bottom: 0.5px;
 }
 
 .container {
@@ -148,20 +188,17 @@ p {
   position: relative;
   top: 200px;
 }
-div {
-  text-align: center;
-}
 
 .poem {
   background-color: rgba(190, 160, 164, 0.90);
   border-radius: 5px 50px 5px 50px;
   display: none;
+  height: 64vh;
   line-height: 10px;
-  height: 500px;
+  opacity: 0.0;
+  overflow: scroll;
   position: fixed;
   top: 150px;
-  overflow: scroll;
-  opacity: 0.0;
 }
 
 .line {
@@ -174,61 +211,25 @@ div {
 }
 
 .rotated {
-  transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  -webkit-transform: rotate(180deg);
-  -o-transform: rotate(180deg);
   position: relative;
   top: 10px;
-}
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+     -moz-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+       -o-transform: rotate(180deg);
 
-nav {
-  background-color: rgba(99, 39, 45, 0.6);
-  font-family: 'ralewayregular', sans-serif;
-  opacity: 0.0;
-}
-
-footer {
-  height: 50px;
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  padding-top: 12px;
-  opacity: 0.0;
-}
-
-footer .center {
-  width: 70px;
-  margin: 0 auto;
-  padding: 10px;
-  border-radius: 50px;
-  position: relative;
-  bottom: 50px;
-}
-
-.add_remove p {
-  font-weight: normal;
-  font-size: 340%;
-  margin: 0;
-  margin-bottom: 20px;
-  cursor: pointer;
-}
-
-.nav-wrapper {
-  margin-left: 20px;
 }
 
 .image {
-  background-size: cover;
   background-repeat: none;
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
+  background-size: cover;
   bottom: 0;
+  display: block;
   left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 @font-face {
